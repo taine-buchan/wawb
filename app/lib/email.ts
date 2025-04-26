@@ -1,7 +1,7 @@
 'use server'
 
 import { z } from 'zod'
-import { formSchema } from './shcemas'
+import { formSchema } from './schemas'
 import { Resend } from 'resend'
 import { EmailTemplate } from '../components/ui/email-template'
 

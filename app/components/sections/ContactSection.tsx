@@ -1,5 +1,5 @@
 'use client'
-import { formSchema } from '@/app/lib/shcemas'
+import { formSchema } from '@/app/lib/schemas'
 
 import { Button } from '@/app/components/ui/button'
 import {
