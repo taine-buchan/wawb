@@ -15,7 +15,7 @@ export default async function Services() {
   }
 
   return (
-    <div className="space-y-6 py-24">
+    <div className="space-y-6 pt-24">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium text-gray-900 tracking-tight">
         Services
       </h1>
