@@ -21,11 +21,15 @@ import {
   FormLabel,
   FormMessage,
 } from '@/app/components/ui/form'
+import { toast } from 'sonner'
 
 import { z } from 'zod'
 import { send } from '@/app/lib/email'
+import { useState } from 'react'
 
 export default function ContactForm() {
+  const [loading, setLoading] = useState(false)
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -35,9 +39,16 @@ export default function ContactForm() {
       message: '',
     },
   })
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    send(values)
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    setLoading(true)
+    try {
+      await send(values)
+      toast.success('Form submitted successfully!')
+    } catch (error) {
+      toast.error('Submission failed. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -137,7 +148,9 @@ export default function ContactForm() {
                     )}
                   />
                 </div>
-                <Button className="w-full">Submit</Button>
+                <Button className="w-full" disabled={loading}>
+                  {loading ? 'Submitting...' : 'Submit'}
+                </Button>{' '}
               </form>
             </Form>
           </CardContent>
