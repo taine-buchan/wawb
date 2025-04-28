@@ -1,15 +1,15 @@
 import Testimonial from './components/sections/Testimonial'
-import { ContactSection } from './components/sections/ContactSection'
 import { HeroSection } from './components/sections/HeroSection'
 import Services from './components/sections/ServicesGallery'
+import ContactForm from './components/sections/ContactSection'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main>
       <HeroSection />
       <Services />
       <Testimonial />
-      <ContactSection />
+      <ContactForm />
     </main>
   )
 }

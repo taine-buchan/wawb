@@ -1,22 +1,37 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import { Button } from '../ui/button'
+import ContactButton from '../ui/contact-button'
 
 export default function Navbar() {
   return (
-    <nav>
-      <div className="flex justify-between items-center h-32 text-[14px] tracking-widest">
-        <Link href="/" className="text-xl font-bold hover:text-blue-600 ">
-          WAWB
-        </Link>
-        <div>
-          <ul className="flex gap-16">
+    <nav className="sticky top-10 z-50 bg-gray-100/50 rounded-sm p-3 backdrop-blur-sm">
+      <div className="flex justify-between items-center text-[14px]">
+        <div className="flex-col gap-1 text-center">
+          <Link href="/">
+            <Image
+              className="opacity-90"
+              src={'/wawb.svg'}
+              alt="logo"
+              width={60}
+              height={50}
+            />
+          </Link>
+        </div>
+        <div className="w-60">
+          <ul className="flex justify-between items-center">
             <li>
-              <Link href="/">Home</Link>
+              <Button variant="link" size="sm" asChild>
+                <Link href="/">Home</Link>
+              </Button>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Button variant="link" size="sm" asChild>
+                <Link href="/about">About</Link>
+              </Button>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <ContactButton />
             </li>
           </ul>
         </div>

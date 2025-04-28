@@ -1,5 +1,6 @@
 import { createClient } from '../../utils/supabase/server'
 import Image from 'next/image'
+import { Button } from '../ui/button'
 
 export default async function Services() {
   const supabase = await createClient()
@@ -14,8 +15,8 @@ export default async function Services() {
   }
 
   return (
-    <div className="space-y-2">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-10 mt-20">
+    <div className="space-y-6 py-24">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium text-gray-900 tracking-tight">
         Services
       </h1>
       <div className="flex gap-4 flex-wrap justify-center">
@@ -40,12 +41,10 @@ export default async function Services() {
                 <h3 className="font-bold">{service.service_name}</h3>
                 <p className="text-gray-500">{service.description}</p>
               </div>
-              <a
-                href="#"
-                className="px-3 py-2 bg-blue-600 hover:bg-blue-700 transition text-white rounded-4xl self-start"
-              >
-                Get Quote
-              </a>
+
+              <Button variant="default" asChild className="mr-auto">
+                <a href="#">Get Quote</a>
+              </Button>
             </div>
           </div>
         ))}

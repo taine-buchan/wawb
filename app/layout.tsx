@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="mx-auto max-w-[1200px] px-4 md:px-6 lg:px-8">
+    <html lang="en" className="mx-auto max-w-[960px] px-4 md:px-6 lg:px-8">
       <body>
         <Navbar />
         {children}
