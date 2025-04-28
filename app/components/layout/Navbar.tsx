@@ -5,7 +5,7 @@ import ContactButton from '../ui/contact-button'
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-10 z-50 bg-gray-100/50 rounded-sm p-3 backdrop-blur-sm">
+    <nav className="sticky top-10 z-50 border bg-gray-100/50 rounded-sm p-3 backdrop-blur-sm">
       <div className="flex justify-between items-center text-[14px]">
         <div className="flex-col gap-1 text-center">
           <Link href="/">
