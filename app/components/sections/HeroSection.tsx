@@ -20,7 +20,7 @@ export const HeroSection = () => {
               alt="image of a house"
               width={1200}
               height={400}
-              className=" object-cover"
+              className="object-cover"
               priority
             />
           </div>
@@ -43,9 +43,16 @@ export const HeroSection = () => {
             <Image
               src="/Star.svg"
               alt="illustration of Jamie Water Blasting"
-              width={20}
-              height={50}
-              className="absolute w-[9%] max-w-[300px] left-[28%] bottom-[62%] object-contain animate-spin [animation-duration:50s] linear infinite reverse"
+              width={100}
+              height={100}
+              className="z-19 absolute w-[9%] max-w-[300px] left-[28%] bottom-[62%] object-contain animate-spin [animation-duration:50s] linear infinite reverse"
+            />
+            <Image
+              src="/Star_blue.svg"
+              alt="illustration of Jamie Water Blasting"
+              width={100}
+              height={100}
+              className=" absolute w-[7%] max-w-[300px] right-[37%] bottom-[69%] object-contain animate-spin [animation-duration:80s] infinite linear reverse"
             />
           </div>
         </div>

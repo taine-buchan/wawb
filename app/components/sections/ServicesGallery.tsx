@@ -43,7 +43,6 @@ export default async function Services() {
               </div>
               <div className="flex mt-auto">
                 {' '}
-                {/* Add mt-auto here */}
                 <PageLinkButton>Get Quote</PageLinkButton>
               </div>
             </div>
