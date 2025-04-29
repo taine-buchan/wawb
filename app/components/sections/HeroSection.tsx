@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import ContactButton from '../ui/contact-button'
+import { PageLinkButton } from '../ui/contact-button'
 
 export const HeroSection = () => {
   return (
@@ -10,17 +10,17 @@ export const HeroSection = () => {
             Cost-effective Water Blasting services to keep your property{' '}
             <span className="text-blue-500">looking its best.</span>
           </h1>
-          <ContactButton />
+          <PageLinkButton>Get in Touch</PageLinkButton>{' '}
         </div>
 
         <div className="aspect-[16/9] relative w-full max-w-6xl">
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 z-19">
             <Image
               src="/HOUSE_BG.svg"
               alt="image of a house"
               width={1200}
               height={400}
-              className="object-cover"
+              className=" object-cover"
               priority
             />
           </div>
@@ -31,14 +31,21 @@ export const HeroSection = () => {
               alt="illustration of Shaun Water Blasting"
               width={400}
               height={600}
-              className="absolute w-[25%] max-w-[300px] left-[10%] bottom-[10%] object-contain"
+              className="z-21 absolute w-[25%] max-w-[300px] left-[10%] bottom-[10%] object-contain"
             />
             <Image
               src="/JAMIE_WAWB.svg"
               alt="illustration of Jamie Water Blasting"
               width={400}
               height={600}
-              className="absolute w-[25%] max-w-[300px] right-[10%] bottom-[10%] object-contain"
+              className="z-20 absolute w-[25%] max-w-[300px] right-[10%] bottom-[10%] object-contain"
+            />
+            <Image
+              src="/Star.svg"
+              alt="illustration of Jamie Water Blasting"
+              width={20}
+              height={50}
+              className="absolute w-[9%] max-w-[300px] left-[28%] bottom-[62%] object-contain animate-spin [animation-duration:50s] linear infinite reverse"
             />
           </div>
         </div>

@@ -4,17 +4,17 @@ import { Card } from '../ui/card'
 export default function Testimonial() {
   return (
     <div className="py-36">
-      <div className=" rounded-2xl flex flex-col md:flex-row gap-8 px-4 border p-4">
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-medium text-gray-900 tracking-tight md:max-w-[500px]">
+      <div className="rounded-2xl flex flex-col md:flex-row gap-8 px-4 border p-4 bg-gray-50">
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-medium tracking-tight md:max-w-[500px]">
           Thanks for the review Paul!
         </h2>
 
         <div>
           <section className="w-full md:w-[600px]">
             <Card>
-              <div className="mx-auto text-center p-4">
+              <div className="mx-auto text-center p-10">
                 <figure>
-                  <blockquote className="text-lg text-gray-900">
+                  <blockquote className="text-lg text-gray-600">
                     <p>
                       “Massive shoutout to Shaun and Jamie for a wicked job on
                       my place. The house looks completely refreshed, like it

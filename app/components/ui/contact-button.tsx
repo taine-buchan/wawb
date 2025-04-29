@@ -1,11 +1,11 @@
 'use client'
-import React from 'react'
-import { Button } from './button'
+import { ArrowRightIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
+import { Button } from './button'
 
-const ContactButton = () => {
+const PageLinkButton = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Button asChild>
+    <Button asChild className="group">
       <Link
         href="#contact"
         onClick={(e) => {
@@ -14,11 +14,32 @@ const ContactButton = () => {
             behavior: 'smooth',
           })
         }}
+        className="flex items-center gap-2"
       >
-        Get Quote
+        {children}
+        <ArrowRightIcon className="h-4 w-4 transition-all duration-300 ease-in-out group-hover:translate-x-1" />
       </Link>
     </Button>
   )
 }
 
-export default ContactButton
+const ServiceLinkButton = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <Button asChild className="group">
+      <Link
+        href="#services"
+        onClick={(e) => {
+          e.preventDefault()
+          document.getElementById('services')?.scrollIntoView({
+            behavior: 'smooth',
+          })
+        }}
+        className="flex items-center gap-2"
+      >
+        {children}
+        <ArrowRightIcon className="h-4 w-4 transition-all duration-300 ease-in-out group-hover:translate-x-1" />
+      </Link>
+    </Button>
+  )
+}
+export { PageLinkButton, ServiceLinkButton }

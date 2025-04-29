@@ -1,6 +1,6 @@
 import { createClient } from '../../utils/supabase/server'
 import Image from 'next/image'
-import { Button } from '../ui/button'
+import { PageLinkButton } from '../ui/contact-button'
 
 export default async function Services() {
   const supabase = await createClient()
@@ -15,36 +15,37 @@ export default async function Services() {
   }
 
   return (
-    <div className="space-y-6 pt-24">
+    <div className="space-y-6 pt-24" id="services">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium text-gray-900 tracking-tight">
         Services
       </h1>
-      <div className="flex gap-4 flex-wrap justify-center">
+      <div className="flex justify-center flex-wrap gap-4">
         {services?.map((service) => (
           <div
             key={service.id}
-            className="bg-white border-black-400 rounded-2xl p-2 w-[360] max-h-[450px] flex flex-col"
+            className="bg-gray-50 border border-gray-200 rounded-xl p-4 w-[288px] max-h-[380px] flex flex-col" // Reduced width and height
           >
             {service.image_url && (
               <Image
                 src={service.image_url}
                 alt={service.service_name}
-                width={1600}
-                height={900}
-                className="w-full h-7/12 rounded-xl object-cover"
+                width={800}
+                height={450}
+                className="w-full h-[180px] rounded-lg object-cover" // Fixed height for images
                 priority={false}
-                quality={80}
+                quality={90}
               />
             )}
-            <div className="flex flex-col flex-1 gap-6 pt-4">
+            <div className="flex flex-wrap flex-col flex-1 gap-3 pt-3">
               <div>
-                <h3 className="font-bold">{service.service_name}</h3>
-                <p className="text-gray-500">{service.description}</p>
+                <h3 className="font-bold text-lg">{service.service_name}</h3>
+                <p className="text-gray-500 text-sm">{service.description}</p>
               </div>
-
-              <Button variant="default" asChild className="mr-auto">
-                <a href="#">Get Quote</a>
-              </Button>
+              <div className="flex mt-auto">
+                {' '}
+                {/* Add mt-auto here */}
+                <PageLinkButton>Get Quote</PageLinkButton>
+              </div>
             </div>
           </div>
         ))}
