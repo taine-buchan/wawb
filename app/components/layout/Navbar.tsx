@@ -10,7 +10,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Link href="/">
             <Image
-              className="shadow-lg rounded-4xl bg-gray-950 p-1"
+              className="border-2 rounded-4xl bg-gray-800 p-1"
               src={'/wawb_logo_v5.svg'}
               alt="logo"
               width={74}
