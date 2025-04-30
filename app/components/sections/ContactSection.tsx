@@ -97,10 +97,10 @@ export default function ContactForm() {
                       name="lastName"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Last Name</FormLabel>
+                          <FormLabel>Phone</FormLabel>
                           <FormControl>
                             <Input
-                              placeholder="Enter your last name"
+                              placeholder="Enter your Phone number"
                               {...field}
                             />
                           </FormControl>

@@ -1,34 +1,33 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '../ui/button'
-import { PageLinkButton, ServiceLinkButton } from '../ui/contact-button'
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-10 z-50 bg-gray-50 border rounded-sm p-3 m-auto shadow-xl/4">
+    <nav className="sticky top-2 bg-gray-50 border rounded-sm p-3 m-auto z-999">
       <div className="flex justify-between items-center text-[14px]">
-        <div className="flex items-center gap-4">
+        <Button variant="outline" asChild>
           <Link href="/">
             <Image
-              className="border-2 rounded-4xl bg-gray-800 p-1"
-              src={'/wawb_logo_v5.svg'}
-              alt="logo"
-              width={74}
-              height={30}
+              src="/wawb_logo_v9.svg"
+              alt="WAWB Logo"
+              width={100}
+              height={40}
+              priority
             />
           </Link>
-        </div>
+        </Button>
+
         <ul className="flex items-center gap-2">
           <li>
-            {/* <Button variant="link" size="sm" asChild>
-              <Link href="/">Home</Link>
-            </Button> */}
+            <Button variant="outline" asChild>
+              <Link href="#services">Services</Link>
+            </Button>
           </li>
           <li>
-            <ServiceLinkButton>Services</ServiceLinkButton>
-          </li>
-          <li>
-            <PageLinkButton>Get Quote</PageLinkButton>{' '}
+            <Button variant="default" asChild>
+              <Link href="#contact">Get Quote</Link>
+            </Button>
           </li>
         </ul>
       </div>
