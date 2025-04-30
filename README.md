@@ -1,24 +1,43 @@
-Water Blasting Service (WAWB) 
+# West Auckland Water Blasting (WAWB)
 
+![WAWB Logo](https://www.westaucklandwaterblasting.com/wawb_logo_v9.svg) 
 
-A responsive website for West Auckland Water Blasting, designed in Figma and built with Next.js, Tailwind CSS, and Supabase. Enables customers to explore services, request quotes (in development), and book appointments (coming soon).
+A responsive website for West Auckland Water Blasting, designed in Figma and built with modern web technologies. Enables customers to explore services, request quotes, and book appointments.
 
-🔗 Live Demo: https://www.westaucklandwaterblasting.com/
+🔗 **Live Demo**: [https://www.westaucklandwaterblasting.com/](https://www.westaucklandwaterblasting.com/)
 
-Features
-✅ Displays available services (pressure washing, roof cleaning, etc.) with images and descriptions, powered by Supabase.
-✅ Direct inquiries via email (powered by Resend).
-🛠 Instant Quote Tool – In development (estimates based on property size/service type).
-📅 Booking Calendar – Coming soon – Schedule appointments in real-time.
+## Features
 
-Tech Stack
-Frontend: Next.js (App Router) + Tailwind CSS
+✅ **Service Catalog**  
+- Displays available services (pressure washing, roof cleaning, etc.) with images and descriptions
+- Powered by Supabase database
 
-Styling: Tailwind CSS + Figma design system
+✅ **Contact System**  
+- Direct inquiries via email
+- Powered by Resend for reliable delivery
 
-Database/Backend: Supabase 
+🛠 **Instant Quote Tool** (Coming Soon)  
+- Estimates based on property size and service type
+- Dynamic pricing calculation
 
-Emails: Resend 
+📅 **Booking Calendar** (Coming Soon)  
+- Real-time appointment scheduling
+- Calendar integration
 
-Hosting: Vercel
+## Tech Stack
+
+**Frontend**  
+- Next.js (App Router)
+- Tailwind CSS
+- React Icons
+
+**Backend**  
+- Supabase (PostgreSQL database)
+- Resend (email API)
+
+**Hosting & Deployment**  
+- Vercel (hosting)
+- GitHub (version control)
+
+##
 
