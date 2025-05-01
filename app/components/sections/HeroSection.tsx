@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Button } from '../ui/button'
 import Link from 'next/link'
+import { ArrowRightIcon } from '@radix-ui/react-icons'
 
 export const HeroSection = () => {
   return (
@@ -15,8 +16,11 @@ export const HeroSection = () => {
             Cost-effective Water Blasting services to keep your property{' '}
             <span className="text-blue-500">looking its best.</span>
           </h1>
-          <Button>
-            <Link href="#contact">Get in Touch</Link>
+          <Button size="lg" variant={'default'} asChild>
+            <Link href="#contact" className="flex items-center gap-2">
+              Get in Touch
+              <ArrowRightIcon />
+            </Link>
           </Button>
         </div>
 
