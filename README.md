@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# West Auckland Water Blasting (WAWB)
 
-## Getting Started
+![WAWB Logo](https://www.westaucklandwaterblasting.com/wawb_logo_v9.svg) 
 
-First, run the development server:
+A responsive website for West Auckland Water Blasting, designed in Figma and built with modern web technologies. Enables customers to explore services, request quotes, and book appointments.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔗 **Live Demo**: [https://www.westaucklandwaterblasting.com/](https://www.westaucklandwaterblasting.com/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+✅ **Service Catalog**  
+- Displays available services (pressure washing, roof cleaning, etc.) with images and descriptions
+- Powered by Supabase database
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+✅ **Contact System**  
+- Direct inquiries via email
+- Powered by Resend for reliable delivery
 
-## Learn More
+🛠 **Instant Quote Tool** (Coming Soon)  
+- Estimates based on property size and service type
+- Dynamic pricing calculation
 
-To learn more about Next.js, take a look at the following resources:
+📅 **Booking Calendar** (Coming Soon)  
+- Real-time appointment scheduling
+- Calendar integration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Frontend**  
+- Next.js (App Router)
+- Tailwind CSS
+- React Icons
 
-## Deploy on Vercel
+**Backend**  
+- Supabase (PostgreSQL database)
+- Resend (email API)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Hosting & Deployment**  
+- Vercel (hosting)
+- GitHub (version control)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+##
+
